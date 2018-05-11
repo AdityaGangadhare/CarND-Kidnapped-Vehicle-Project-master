@@ -73,7 +73,7 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
 	//  http://www.cplusplus.com/reference/random/default_random_engine/
 
 /*******************************************************************************
-*                          Creating normal distribution      		           *
+*                          Creating normal distribution      		       *
 *******************************************************************************/
 
 	default_random_engine gen;
@@ -91,7 +91,7 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
 	normal_distribution<double> dist_theta(0, std_theta);
 
 /*******************************************************************************
-*                          Calculating state after a time step 		           *
+*                          Calculating state after a time step 		       *
 *******************************************************************************/
 	for (int i = 0; i < num_particles; i++) {
 
@@ -167,7 +167,7 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
     double theta = particles[i].theta;
 
 /*******************************************************************************
-*        				 Find landmarks in particle's range	  			       *
+*  	                Find landmarks in particle's range	  	       *
 *******************************************************************************/
 
     vector<LandmarkObs> landmarksWithinRange;
